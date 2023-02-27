@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="173c73e5-8f6a-48b7-94e5-fd5fc1a862d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/mayavi/.coveragerc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/DEVELOPING.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/LICENSE_COLORBREWER.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/LICENSE_YORICK.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/MANIFEST.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/README-tvtk.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/dataset_diagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/structured_points.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/structured_points_connected.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/unstructured_points.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/unstructured_points_cell_data.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/unstructured_points_connected.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/unstructured_points_scalar_data.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/unstructured_points_scalar_data_labels.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/dataset_diagram/unstructured_points_vector_data.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/artwork/mayavi-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/codecov.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/API.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/CHANGES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/DEVELOPMENT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/MakefileMayavi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/MakefileTVTK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/THANKS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/TODO.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/mayavi2.man" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/source/render_examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/docs/source/render_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/mayavi/nongui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/mayavi/standalone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/mayavi/user_mayavi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/mayavi/zzz_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/actor_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/animated_texture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/array_animation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/dscene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/ivtk_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/off_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/scene_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/texture_glyph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/examples/tvtk/tiny_mesh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/image_LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/image_LICENSE_CP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/image_LICENSE_Eclipse.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/image_LICENSE_Nuvola.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/image_LICENSE_OOo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_array_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_close_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_contour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_generic_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_glyph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_grid_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_hide_show.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_image_data_probe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_image_plane_widget.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_ipw_multiple_scalars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_labels.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_mlab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_mlab_envisage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_mlab_savefig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_mlab_show.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_optional_collection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_plot3d_mb_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_restore_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_set_active_attribute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_streamline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_text3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_texture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_tools_camera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_user_defined.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_vtk_data_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/integrationtests/mayavi/test_vtk_xml_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/__version__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/action/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/action/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/action/help.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/action/modules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/action/save_load.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/action/sources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/actor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/actor2d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/contour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/custom_grid_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/cutter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/glyph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/glyph_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/grid_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/implicit_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/implicit_widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/optional.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/poly_data_normals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/components/source_widget.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/adder_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/component.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/customize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/dataset_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/file_data_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/lut_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/metadata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/module_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/mouse_pick_dispatcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/null_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/off_screen_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/pipeline_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/pipeline_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/registry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/trait_defs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/traits_menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/core/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/cell_derivatives.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/cell_to_point_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/collection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/contour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/cut_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/data_set_clipper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/decimatepro.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/delaunay2d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/delaunay3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/elevation_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/extract_edges.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/extract_grid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/extract_tensor_components.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/extract_unstructured_grid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/extract_vector_components.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/extract_vector_norm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/filter_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/gaussian_splatter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/greedy_terrain_decimation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/image_change_information.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/image_data_probe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/mask_points.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/metadata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/optional.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/point_to_cell_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/poly_data_filter_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/poly_data_normals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/quadric_decimation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/select_output.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/set_active_attribute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/stripper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/threshold.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/transform_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/triangle_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/tube.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/user_defined.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/vorticity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/warp_scalar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/warp_vector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/filters/wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/images/image_LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/images/m2.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/mlab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/axes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/contour_grid_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/custom_grid_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/generic_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/glyph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/grid_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/hyper_streamline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/image_actor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/image_plane_widget.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/iso_surface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/labels.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/metadata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/orientation_axes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/outline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/scalar_cut_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/skeleton_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/slice_unstructured_grid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/streamline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/structured_grid_outline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/surface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/tensor_glyph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/text3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/vector_cut_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/vectors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/volume.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/modules/warp_vector_cut_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/envisage_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/mayavi_plugin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/mayavi_ui_action_set.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/mayavi_ui_plugin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/mayavi_workbench_application.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/plugins/script.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/bindings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/contrib_finder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/mayavi_preferences_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/preference_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/preference_manager_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/preferences/preferences_helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/scripts/mayavi2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/scripts/mayavi2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/scripts/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/array_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/builtin_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/builtin_surface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/chaco_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/image_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/metadata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/parametric_surface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/plot3d_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/point_load.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/poly_data_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/three_ds_importer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/unstructured_grid_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/volume_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/vrml_importer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/vtk_data_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/vtk_file_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/vtk_object_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/sources/vtk_xml_file_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/data_reader_test_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/datasets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/runtests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_array_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_builtin_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_builtin_surface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_composite_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_contour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_core_common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_core_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_csv_sniff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_customize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_cut_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_dataset_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_engine_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_extract_grid_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_file_timestep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_garbage_collection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_glyph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_grid_plane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_image_data_probe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_image_data_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_image_plane_widget.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_ipw_multiple_scalars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_mayavi_traits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_mlab_integration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_mlab_null_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_mlab_scene_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_mlab_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_mlab_source_integration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_mouse_pick_dispatcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_no_ui_toolkit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_optional_collection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_pipeline_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_plot3d_mb_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_poly_data_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_preferences_mirror.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_pylab_luts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_recorder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_registry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_script_recording.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_set_active_attribute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_sources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_streamline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_text3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_threshold_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_unstructured_data_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_user_defined.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_volume.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_vtk_data_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_vtk_file_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_vtk_object_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tests/test_vtk_xml_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/animator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/auto_doc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/camera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/decorations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/engine_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/figure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/helper_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/mlab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/mlab_scene_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/modules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/notebook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/pipe_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/preferences_mirror.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/probe_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/remote/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/show.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/sources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/tools/tools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mayavi/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/mlab_reference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/scripts/cm2lut.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/scripts/gen_lut_previews.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/setup.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/array_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/class_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/code_gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/custom/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/indenter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/messenger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/misc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pipeline/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pipeline/browser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/actor_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/actor_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/actors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/decorated_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/light_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/movie_maker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/picker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/scene_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/scene_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/toolkit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/tvtk_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/pyface/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/special_gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/src/array_ext.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_array_ext.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_array_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_browser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_class_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_ctf_util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_garbage_collection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_indenter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_messenger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_misc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_movie_maker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_pyface_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_tvtk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_tvtk_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_tvtk_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_vtk_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tests/test_wrapper_gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tools/ivtk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tools/mlab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tools/tvtk_doc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tools/visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tvtk_access.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tvtk_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/tvtk_base_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/util/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/util/ctf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/util/gradient_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/util/qt_gradient_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/util/tk_gradient_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/util/traitsui_gradient_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/util/wx_gradient_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/value_column.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/view/parametric_function_source_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/vtk_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/vtk_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mayavi/tvtk/wrapper_gen.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/mayavi" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MHxp4PoMvg92IbXYKsdMIn8tHM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="mainframe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mainframe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.mainframe" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="173c73e5-8f6a-48b7-94e5-fd5fc1a862d0" name="Changes" comment="" />
+      <created>1677438491198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677438491198</updated>
+      <workItem from="1677438494669" duration="23000" />
+      <workItem from="1677438521145" duration="5000" />
+      <workItem from="1677439060619" duration="136000" />
+      <workItem from="1677439978609" duration="46000" />
+      <workItem from="1677440846862" duration="936000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TP3$mainframe.coverage" NAME="mainframe Coverage Results" MODIFIED="1677441014556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

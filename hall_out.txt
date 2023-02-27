@@ -1,0 +1,1590 @@
+1
+	concise SG	1
+	H-M entry	P_1
+2
+	concise SG	2
+	H-M entry	P_-1
+3
+	concise SG	3:b
+	H-M entry	P_1_2_1
+4
+	concise SG	3:c
+	H-M entry	P_1_1_2
+5
+	concise SG	3:a
+	H-M entry	P_2_1_1
+6
+	concise SG	4:b
+	H-M entry	P_1_21_1
+7
+	concise SG	4:c
+	H-M entry	P_1_1_21
+8
+	concise SG	4:a
+	H-M entry	P_21_1_1
+9
+	concise SG	5:b1
+	H-M entry	C_1_2_1
+10
+	concise SG	5:b2
+	H-M entry	A_1_2_1
+11
+	concise SG	5:b3
+	H-M entry	I_1_2_1
+12
+	concise SG	5:c1
+	H-M entry	A_1_1_2
+13
+	concise SG	5:c2
+	H-M entry	B_1_1_2
+14
+	concise SG	5:c3
+	H-M entry	I_1_1_2
+15
+	concise SG	5:a1
+	H-M entry	B_2_1_1
+16
+	concise SG	5:a2
+	H-M entry	C_2_1_1
+17
+	concise SG	5:a3
+	H-M entry	I_2_1_1
+18
+	concise SG	6:b
+	H-M entry	P_1_m_1
+19
+	concise SG	6:c
+	H-M entry	P_1_1_m
+20
+	concise SG	6:a
+	H-M entry	P_m_1_1
+21
+	concise SG	7:b1
+	H-M entry	P_1_c_1
+22
+	concise SG	7:b2
+	H-M entry	P_1_n_1
+23
+	concise SG	7:b3
+	H-M entry	P_1_a_1
+24
+	concise SG	7:c1
+	H-M entry	P_1_1_a
+25
+	concise SG	7:c2
+	H-M entry	P_1_1_n
+26
+	concise SG	7:c3
+	H-M entry	P_1_1_b
+27
+	concise SG	7:a1
+	H-M entry	P_b_1_1
+28
+	concise SG	7:a2
+	H-M entry	P_n_1_1
+29
+	concise SG	7:a3
+	H-M entry	P_c_1_1
+30
+	concise SG	8:b1
+	H-M entry	C_1_m_1
+31
+	concise SG	8:b2
+	H-M entry	A_1_m_1
+32
+	concise SG	8:b3
+	H-M entry	I_1_m_1
+33
+	concise SG	8:c1
+	H-M entry	A_1_1_m
+34
+	concise SG	8:c2
+	H-M entry	B_1_1_m
+35
+	concise SG	8:c3
+	H-M entry	I_1_1_m
+36
+	concise SG	8:a1
+	H-M entry	B_m_1_1
+37
+	concise SG	8:a2
+	H-M entry	C_m_1_1
+38
+	concise SG	8:a3
+	H-M entry	I_m_1_1
+39
+	concise SG	9:b1
+	H-M entry	C_1_c_1
+40
+	concise SG	9:b2
+	H-M entry	A_1_n_1
+41
+	concise SG	9:b3
+	H-M entry	I_1_a_1
+42
+	concise SG	9:-b1
+	H-M entry	A_1_a_1
+43
+	concise SG	9:-b2
+	H-M entry	C_1_n_1
+44
+	concise SG	9:-b3
+	H-M entry	I_1_c_1
+45
+	concise SG	9:c1
+	H-M entry	A_1_1_a
+46
+	concise SG	9:c2
+	H-M entry	B_1_1_n
+47
+	concise SG	9:c3
+	H-M entry	I_1_1_b
+48
+	concise SG	9:-c1
+	H-M entry	B_1_1_b
+49
+	concise SG	9:-c2
+	H-M entry	A_1_1_n
+50
+	concise SG	9:-c3
+	H-M entry	I_1_1_a
+51
+	concise SG	9:a1
+	H-M entry	B_b_1_1
+52
+	concise SG	9:a2
+	H-M entry	C_n_1_1
+53
+	concise SG	9:a3
+	H-M entry	I_c_1_1
+54
+	concise SG	9:-a1
+	H-M entry	C_c_1_1
+55
+	concise SG	9:-a2
+	H-M entry	B_n_1_1
+56
+	concise SG	9:-a3
+	H-M entry	I_b_1_1
+57
+	concise SG	10:b
+	H-M entry	P_1_2/m_1
+58
+	concise SG	10:c
+	H-M entry	P_1_1_2/m
+59
+	concise SG	10:a
+	H-M entry	P_2/m_1_1
+60
+	concise SG	11:b
+	H-M entry	P_1_21/m_1
+61
+	concise SG	11:c
+	H-M entry	P_1_1_21/m
+62
+	concise SG	11:a
+	H-M entry	P_21/m_1_1
+63
+	concise SG	12:b1
+	H-M entry	C_1_2/m_1
+64
+	concise SG	12:b2
+	H-M entry	A_1_2/m_1
+65
+	concise SG	12:b3
+	H-M entry	I_1_2/m_1
+66
+	concise SG	12:c1
+	H-M entry	A_1_1_2/m
+67
+	concise SG	12:c2
+	H-M entry	B_1_1_2/m
+68
+	concise SG	12:c3
+	H-M entry	I_1_1_2/m
+69
+	concise SG	12:a1
+	H-M entry	B_2/m_1_1
+70
+	concise SG	12:a2
+	H-M entry	C_2/m_1_1
+71
+	concise SG	12:a3
+	H-M entry	I_2/m_1_1
+72
+	concise SG	13:b1
+	H-M entry	P_1_2/c_1
+73
+	concise SG	13:b2
+	H-M entry	P_1_2/n_1
+74
+	concise SG	13:b3
+	H-M entry	P_1_2/a_1
+75
+	concise SG	13:c1
+	H-M entry	P_1_1_2/a
+76
+	concise SG	13:c2
+	H-M entry	P_1_1_2/n
+77
+	concise SG	13:c3
+	H-M entry	P_1_1_2/b
+78
+	concise SG	13:a1
+	H-M entry	P_2/b_1_1
+79
+	concise SG	13:a2
+	H-M entry	P_2/n_1_1
+80
+	concise SG	13:a3
+	H-M entry	P_2/c_1_1
+81
+	concise SG	14:b1
+	H-M entry	P_1_21/c_1
+82
+	concise SG	14:b2
+	H-M entry	P_1_21/n_1
+83
+	concise SG	14:b3
+	H-M entry	P_1_21/a_1
+84
+	concise SG	14:c1
+	H-M entry	P_1_1_21/a
+85
+	concise SG	14:c2
+	H-M entry	P_1_1_21/n
+86
+	concise SG	14:c3
+	H-M entry	P_1_1_21/b
+87
+	concise SG	14:a1
+	H-M entry	P_21/b_1_1
+88
+	concise SG	14:a2
+	H-M entry	P_21/n_1_1
+89
+	concise SG	14:a3
+	H-M entry	P_21/c_1_1
+90
+	concise SG	15:b1
+	H-M entry	C_1_2/c_1
+91
+	concise SG	15:b2
+	H-M entry	A_1_2/n_1
+92
+	concise SG	15:b3
+	H-M entry	I_1_2/a_1
+93
+	concise SG	15:-b1
+	H-M entry	A_1_2/a_1
+94
+	concise SG	15:-b2
+	H-M entry	C_1_2/n_1
+95
+	concise SG	15:-b3
+	H-M entry	I_1_2/c_1
+96
+	concise SG	15:c1
+	H-M entry	A_1_1_2/a
+97
+	concise SG	15:c2
+	H-M entry	B_1_1_2/n
+98
+	concise SG	15:c3
+	H-M entry	I_1_1_2/b
+99
+	concise SG	15:-c1
+	H-M entry	B_1_1_2/b
+100
+	concise SG	15:-c2
+	H-M entry	A_1_1_2/n
+101
+	concise SG	15:-c3
+	H-M entry	I_1_1_2/a
+102
+	concise SG	15:a1
+	H-M entry	B_2/b_1_1
+103
+	concise SG	15:a2
+	H-M entry	C_2/n_1_1
+104
+	concise SG	15:a3
+	H-M entry	I_2/c_1_1
+105
+	concise SG	15:-a1
+	H-M entry	C_2/c_1_1
+106
+	concise SG	15:-a2
+	H-M entry	B_2/n_1_1
+107
+	concise SG	15:-a3
+	H-M entry	I_2/b_1_1
+108
+	concise SG	16
+	H-M entry	P_2_2_2
+109
+	concise SG	17
+	H-M entry	P_2_2_21
+110
+	concise SG	17:cab
+	H-M entry	P_21_2_2
+111
+	concise SG	17:bca
+	H-M entry	P_2_21_2
+112
+	concise SG	18
+	H-M entry	P_21_21_2
+113
+	concise SG	18:cab
+	H-M entry	P_2_21_21
+114
+	concise SG	18:bca
+	H-M entry	P_21_2_21
+115
+	concise SG	19
+	H-M entry	P_21_21_21
+116
+	concise SG	20
+	H-M entry	C_2_2_21
+117
+	concise SG	20:cab
+	H-M entry	A_21_2_2
+118
+	concise SG	20:bca
+	H-M entry	B_2_21_2
+119
+	concise SG	21
+	H-M entry	C_2_2_2
+120
+	concise SG	21:cab
+	H-M entry	A_2_2_2
+121
+	concise SG	21:bca
+	H-M entry	B_2_2_2
+122
+	concise SG	22
+	H-M entry	F_2_2_2
+123
+	concise SG	23
+	H-M entry	I_2_2_2
+124
+	concise SG	24
+	H-M entry	I_21_21_21
+125
+	concise SG	25
+	H-M entry	P_m_m_2
+126
+	concise SG	25:cab
+	H-M entry	P_2_m_m
+127
+	concise SG	25:bca
+	H-M entry	P_m_2_m
+128
+	concise SG	26
+	H-M entry	P_m_c_21
+129
+	concise SG	26:ba-c
+	H-M entry	P_c_m_21
+130
+	concise SG	26:cab
+	H-M entry	P_21_m_a
+131
+	concise SG	26:-cba
+	H-M entry	P_21_a_m
+132
+	concise SG	26:bca
+	H-M entry	P_b_21_m
+133
+	concise SG	26:a-cb
+	H-M entry	P_m_21_b
+134
+	concise SG	27
+	H-M entry	P_c_c_2
+135
+	concise SG	27:cab
+	H-M entry	P_2_a_a
+136
+	concise SG	27:bca
+	H-M entry	P_b_2_b
+137
+	concise SG	28
+	H-M entry	P_m_a_2
+138
+	concise SG	28:ba-c
+	H-M entry	P_b_m_2
+139
+	concise SG	28:cab
+	H-M entry	P_2_m_b
+140
+	concise SG	28:-cba
+	H-M entry	P_2_c_m
+141
+	concise SG	28:bca
+	H-M entry	P_c_2_m
+142
+	concise SG	28:a-cb
+	H-M entry	P_m_2_a
+143
+	concise SG	29
+	H-M entry	P_c_a_21
+144
+	concise SG	29:ba-c
+	H-M entry	P_b_c_21
+145
+	concise SG	29:cab
+	H-M entry	P_21_a_b
+146
+	concise SG	29:-cba
+	H-M entry	P_21_c_a
+147
+	concise SG	29:bca
+	H-M entry	P_c_21_b
+148
+	concise SG	29:a-cb
+	H-M entry	P_b_21_a
+149
+	concise SG	30
+	H-M entry	P_n_c_2
+150
+	concise SG	30:ba-c
+	H-M entry	P_c_n_2
+151
+	concise SG	30:cab
+	H-M entry	P_2_n_a
+152
+	concise SG	30:-cba
+	H-M entry	P_2_a_n
+153
+	concise SG	30:bca
+	H-M entry	P_b_2_n
+154
+	concise SG	30:a-cb
+	H-M entry	P_n_2_b
+155
+	concise SG	31
+	H-M entry	P_m_n_21
+156
+	concise SG	31:ba-c
+	H-M entry	P_n_m_21
+157
+	concise SG	31:cab
+	H-M entry	P_21_m_n
+158
+	concise SG	31:-cba
+	H-M entry	P_21_n_m
+159
+	concise SG	31:bca
+	H-M entry	P_n_21_m
+160
+	concise SG	31:a-cb
+	H-M entry	P_m_21_n
+161
+	concise SG	32
+	H-M entry	P_b_a_2
+162
+	concise SG	32:cab
+	H-M entry	P_2_c_b
+163
+	concise SG	32:bca
+	H-M entry	P_c_2_a
+164
+	concise SG	33
+	H-M entry	P_n_a_21
+165
+	concise SG	33:ba-c
+	H-M entry	P_b_n_21
+166
+	concise SG	33:cab
+	H-M entry	P_21_n_b
+167
+	concise SG	33:-cba
+	H-M entry	P_21_c_n
+168
+	concise SG	33:bca
+	H-M entry	P_c_21_n
+169
+	concise SG	33:a-cb
+	H-M entry	P_n_21_a
+170
+	concise SG	34
+	H-M entry	P_n_n_2
+171
+	concise SG	34:cab
+	H-M entry	P_2_n_n
+172
+	concise SG	34:bca
+	H-M entry	P_n_2_n
+173
+	concise SG	35
+	H-M entry	C_m_m_2
+174
+	concise SG	35:cab
+	H-M entry	A_2_m_m
+175
+	concise SG	35:bca
+	H-M entry	B_m_2_m
+176
+	concise SG	36
+	H-M entry	C_m_c_21
+177
+	concise SG	36:ba-c
+	H-M entry	C_c_m_21
+178
+	concise SG	36:cab
+	H-M entry	A_21_m_a
+179
+	concise SG	36:-cba
+	H-M entry	A_21_a_m
+180
+	concise SG	36:bca
+	H-M entry	B_b_21_m
+181
+	concise SG	36:a-cb
+	H-M entry	B_m_21_b
+182
+	concise SG	37
+	H-M entry	C_c_c_2
+183
+	concise SG	37:cab
+	H-M entry	A_2_a_a
+184
+	concise SG	37:bca
+	H-M entry	B_b_2_b
+185
+	concise SG	38
+	H-M entry	A_m_m_2
+186
+	concise SG	38:ba-c
+	H-M entry	B_m_m_2
+187
+	concise SG	38:cab
+	H-M entry	B_2_m_m
+188
+	concise SG	38:-cba
+	H-M entry	C_2_m_m
+189
+	concise SG	38:bca
+	H-M entry	C_m_2_m
+190
+	concise SG	38:a-cb
+	H-M entry	A_m_2_m
+191
+	concise SG	39
+	H-M entry	A_b_m_2
+192
+	concise SG	39:ba-c
+	H-M entry	B_m_a_2
+193
+	concise SG	39:cab
+	H-M entry	B_2_c_m
+194
+	concise SG	39:-cba
+	H-M entry	C_2_m_b
+195
+	concise SG	39:bca
+	H-M entry	C_m_2_a
+196
+	concise SG	39:a-cb
+	H-M entry	A_c_2_m
+197
+	concise SG	40
+	H-M entry	A_m_a_2
+198
+	concise SG	40:ba-c
+	H-M entry	B_b_m_2
+199
+	concise SG	40:cab
+	H-M entry	B_2_m_b
+200
+	concise SG	40:-cba
+	H-M entry	C_2_c_m
+201
+	concise SG	40:bca
+	H-M entry	C_c_2_m
+202
+	concise SG	40:a-cb
+	H-M entry	A_m_2_a
+203
+	concise SG	41
+	H-M entry	A_b_a_2
+204
+	concise SG	41:ba-c
+	H-M entry	B_b_a_2
+205
+	concise SG	41:cab
+	H-M entry	B_2_c_b
+206
+	concise SG	41:-cba
+	H-M entry	C_2_c_b
+207
+	concise SG	41:bca
+	H-M entry	C_c_2_a
+208
+	concise SG	41:a-cb
+	H-M entry	A_c_2_a
+209
+	concise SG	42
+	H-M entry	F_m_m_2
+210
+	concise SG	42:cab
+	H-M entry	F_2_m_m
+211
+	concise SG	42:bca
+	H-M entry	F_m_2_m
+212
+	concise SG	43
+	H-M entry	F_d_d_2
+213
+	concise SG	43:cab
+	H-M entry	F_2_d_d
+214
+	concise SG	43:bca
+	H-M entry	F_d_2_d
+215
+	concise SG	44
+	H-M entry	I_m_m_2
+216
+	concise SG	44:cab
+	H-M entry	I_2_m_m
+217
+	concise SG	44:bca
+	H-M entry	I_m_2_m
+218
+	concise SG	45
+	H-M entry	I_b_a_2
+219
+	concise SG	45:cab
+	H-M entry	I_2_c_b
+220
+	concise SG	45:bca
+	H-M entry	I_c_2_a
+221
+	concise SG	46
+	H-M entry	I_m_a_2
+222
+	concise SG	46:ba-c
+	H-M entry	I_b_m_2
+223
+	concise SG	46:cab
+	H-M entry	I_2_m_b
+224
+	concise SG	46:-cba
+	H-M entry	I_2_c_m
+225
+	concise SG	46:bca
+	H-M entry	I_c_2_m
+226
+	concise SG	46:a-cb
+	H-M entry	I_m_2_a
+227
+	concise SG	47
+	H-M entry	P_m_m_m
+228
+	concise SG	48:1
+	H-M entry	P_n_n_n:1
+229
+	concise SG	48:2
+	H-M entry	P_n_n_n:2
+230
+	concise SG	49
+	H-M entry	P_c_c_m
+231
+	concise SG	49:cab
+	H-M entry	P_m_a_a
+232
+	concise SG	49:bca
+	H-M entry	P_b_m_b
+233
+	concise SG	50:1
+	H-M entry	P_b_a_n:1
+234
+	concise SG	50:2
+	H-M entry	P_b_a_n:2
+235
+	concise SG	50:1cab
+	H-M entry	P_n_c_b:1
+236
+	concise SG	50:2cab
+	H-M entry	P_n_c_b:2
+237
+	concise SG	50:1bca
+	H-M entry	P_c_n_a:1
+238
+	concise SG	50:2bca
+	H-M entry	P_c_n_a:2
+239
+	concise SG	51
+	H-M entry	P_m_m_a
+240
+	concise SG	51:ba-c
+	H-M entry	P_m_m_b
+241
+	concise SG	51:cab
+	H-M entry	P_b_m_m
+242
+	concise SG	51:-cba
+	H-M entry	P_c_m_m
+243
+	concise SG	51:bca
+	H-M entry	P_m_c_m
+244
+	concise SG	51:a-cb
+	H-M entry	P_m_a_m
+245
+	concise SG	52
+	H-M entry	P_n_n_a
+246
+	concise SG	52:ba-c
+	H-M entry	P_n_n_b
+247
+	concise SG	52:cab
+	H-M entry	P_b_n_n
+248
+	concise SG	52:-cba
+	H-M entry	P_c_n_n
+249
+	concise SG	52:bca
+	H-M entry	P_n_c_n
+250
+	concise SG	52:a-cb
+	H-M entry	P_n_a_n
+251
+	concise SG	53
+	H-M entry	P_m_n_a
+252
+	concise SG	53:ba-c
+	H-M entry	P_n_m_b
+253
+	concise SG	53:cab
+	H-M entry	P_b_m_n
+254
+	concise SG	53:-cba
+	H-M entry	P_c_n_m
+255
+	concise SG	53:bca
+	H-M entry	P_n_c_m
+256
+	concise SG	53:a-cb
+	H-M entry	P_m_a_n
+257
+	concise SG	54
+	H-M entry	P_c_c_a
+258
+	concise SG	54:ba-c
+	H-M entry	P_c_c_b
+259
+	concise SG	54:cab
+	H-M entry	P_b_a_a
+260
+	concise SG	54:-cba
+	H-M entry	P_c_a_a
+261
+	concise SG	54:bca
+	H-M entry	P_b_c_b
+262
+	concise SG	54:a-cb
+	H-M entry	P_b_a_b
+263
+	concise SG	55
+	H-M entry	P_b_a_m
+264
+	concise SG	55:cab
+	H-M entry	P_m_c_b
+265
+	concise SG	55:bca
+	H-M entry	P_c_m_a
+266
+	concise SG	56
+	H-M entry	P_c_c_n
+267
+	concise SG	56:cab
+	H-M entry	P_n_a_a
+268
+	concise SG	56:bca
+	H-M entry	P_b_n_b
+269
+	concise SG	57
+	H-M entry	P_b_c_m
+270
+	concise SG	57:ba-c
+	H-M entry	P_c_a_m
+271
+	concise SG	57:cab
+	H-M entry	P_m_c_a
+272
+	concise SG	57:-cba
+	H-M entry	P_m_a_b
+273
+	concise SG	57:bca
+	H-M entry	P_b_m_a
+274
+	concise SG	57:a-cb
+	H-M entry	P_c_m_b
+275
+	concise SG	58
+	H-M entry	P_n_n_m
+276
+	concise SG	58:cab
+	H-M entry	P_m_n_n
+277
+	concise SG	58:bca
+	H-M entry	P_n_m_n
+278
+	concise SG	59:1
+	H-M entry	P_m_m_n:1
+279
+	concise SG	59:2
+	H-M entry	P_m_m_n:2
+280
+	concise SG	59:1cab
+	H-M entry	P_n_m_m:1
+281
+	concise SG	59:2cab
+	H-M entry	P_n_m_m:2
+282
+	concise SG	59:1bca
+	H-M entry	P_m_n_m:1
+283
+	concise SG	59:2bca
+	H-M entry	P_m_n_m:2
+284
+	concise SG	60
+	H-M entry	P_b_c_n
+285
+	concise SG	60:ba-c
+	H-M entry	P_c_a_n
+286
+	concise SG	60:cab
+	H-M entry	P_n_c_a
+287
+	concise SG	60:-cba
+	H-M entry	P_n_a_b
+288
+	concise SG	60:bca
+	H-M entry	P_b_n_a
+289
+	concise SG	60:a-cb
+	H-M entry	P_c_n_b
+290
+	concise SG	61
+	H-M entry	P_b_c_a
+291
+	concise SG	61:ba-c
+	H-M entry	P_c_a_b
+292
+	concise SG	62
+	H-M entry	P_n_m_a
+293
+	concise SG	62:ba-c
+	H-M entry	P_m_n_b
+294
+	concise SG	62:cab
+	H-M entry	P_b_n_m
+295
+	concise SG	62:-cba
+	H-M entry	P_c_m_n
+296
+	concise SG	62:bca
+	H-M entry	P_m_c_n
+297
+	concise SG	62:a-cb
+	H-M entry	P_n_a_m
+298
+	concise SG	63
+	H-M entry	C_m_c_m
+299
+	concise SG	63:ba-c
+	H-M entry	C_c_m_m
+300
+	concise SG	63:cab
+	H-M entry	A_m_m_a
+301
+	concise SG	63:-cba
+	H-M entry	A_m_a_m
+302
+	concise SG	63:bca
+	H-M entry	B_b_m_m
+303
+	concise SG	63:a-cb
+	H-M entry	B_m_m_b
+304
+	concise SG	64
+	H-M entry	C_m_c_a
+305
+	concise SG	64:ba-c
+	H-M entry	C_c_m_b
+306
+	concise SG	64:cab
+	H-M entry	A_b_m_a
+307
+	concise SG	64:-cba
+	H-M entry	A_c_a_m
+308
+	concise SG	64:bca
+	H-M entry	B_b_c_m
+309
+	concise SG	64:a-cb
+	H-M entry	B_m_a_b
+310
+	concise SG	65
+	H-M entry	C_m_m_m
+311
+	concise SG	65:cab
+	H-M entry	A_m_m_m
+312
+	concise SG	65:bca
+	H-M entry	B_m_m_m
+313
+	concise SG	66
+	H-M entry	C_c_c_m
+314
+	concise SG	66:cab
+	H-M entry	A_m_a_a
+315
+	concise SG	66:bca
+	H-M entry	B_b_m_b
+316
+	concise SG	67
+	H-M entry	C_m_m_a
+317
+	concise SG	67:ba-c
+	H-M entry	C_m_m_b
+318
+	concise SG	67:cab
+	H-M entry	A_b_m_m
+319
+	concise SG	67:-cba
+	H-M entry	A_c_m_m
+320
+	concise SG	67:bca
+	H-M entry	B_m_c_m
+321
+	concise SG	67:a-cb
+	H-M entry	B_m_a_m
+322
+	concise SG	68:1
+	H-M entry	C_c_c_a:1
+323
+	concise SG	68:2
+	H-M entry	C_c_c_a:2
+324
+	concise SG	68:1ba-c
+	H-M entry	C_c_c_b:1
+325
+	concise SG	68:2ba-c
+	H-M entry	C_c_c_b:2
+326
+	concise SG	68:1cab
+	H-M entry	A_b_a_a:1
+327
+	concise SG	68:2cab
+	H-M entry	A_b_a_a:2
+328
+	concise SG	68:1-cba
+	H-M entry	A_c_a_a:1
+329
+	concise SG	68:2-cba
+	H-M entry	A_c_a_a:2
+330
+	concise SG	68:1bca
+	H-M entry	B_b_c_b:1
+331
+	concise SG	68:2bca
+	H-M entry	B_b_c_b:2
+332
+	concise SG	68:1a-cb
+	H-M entry	B_b_a_b:1
+333
+	concise SG	68:2a-cb
+	H-M entry	B_b_a_b:2
+334
+	concise SG	69
+	H-M entry	F_m_m_m
+335
+	concise SG	70:1
+	H-M entry	F_d_d_d:1
+336
+	concise SG	70:2
+	H-M entry	F_d_d_d:2
+337
+	concise SG	71
+	H-M entry	I_m_m_m
+338
+	concise SG	72
+	H-M entry	I_b_a_m
+339
+	concise SG	72:cab
+	H-M entry	I_m_c_b
+340
+	concise SG	72:bca
+	H-M entry	I_c_m_a
+341
+	concise SG	73
+	H-M entry	I_b_c_a
+342
+	concise SG	73:ba-c
+	H-M entry	I_c_a_b
+343
+	concise SG	74
+	H-M entry	I_m_m_a
+344
+	concise SG	74:ba-c
+	H-M entry	I_m_m_b
+345
+	concise SG	74:cab
+	H-M entry	I_b_m_m
+346
+	concise SG	74:-cba
+	H-M entry	I_c_m_m
+347
+	concise SG	74:bca
+	H-M entry	I_m_c_m
+348
+	concise SG	74:a-cb
+	H-M entry	I_m_a_m
+349
+	concise SG	75
+	H-M entry	P_4
+350
+	concise SG	76
+	H-M entry	P_41
+351
+	concise SG	77
+	H-M entry	P_42
+352
+	concise SG	78
+	H-M entry	P_43
+353
+	concise SG	79
+	H-M entry	I_4
+354
+	concise SG	80
+	H-M entry	I_41
+355
+	concise SG	81
+	H-M entry	P_-4
+356
+	concise SG	82
+	H-M entry	I_-4
+357
+	concise SG	83
+	H-M entry	P_4/m
+358
+	concise SG	84
+	H-M entry	P_42/m
+359
+	concise SG	85:1
+	H-M entry	P_4/n:1
+360
+	concise SG	85:2
+	H-M entry	P_4/n:2
+361
+	concise SG	86:1
+	H-M entry	P_42/n:1
+362
+	concise SG	86:2
+	H-M entry	P_42/n:2
+363
+	concise SG	87
+	H-M entry	I_4/m
+364
+	concise SG	88:1
+	H-M entry	I_41/a:1
+365
+	concise SG	88:2
+	H-M entry	I_41/a:2
+366
+	concise SG	89
+	H-M entry	P_4_2_2
+367
+	concise SG	90
+	H-M entry	P_4_21_2
+368
+	concise SG	91
+	H-M entry	P_41_2_2
+369
+	concise SG	92
+	H-M entry	P_41_21_2
+370
+	concise SG	93
+	H-M entry	P_42_2_2
+371
+	concise SG	94
+	H-M entry	P_42_21_2
+372
+	concise SG	95
+	H-M entry	P_43_2_2
+373
+	concise SG	96
+	H-M entry	P_43_21_2
+374
+	concise SG	97
+	H-M entry	I_4_2_2
+375
+	concise SG	98
+	H-M entry	I_41_2_2
+376
+	concise SG	99
+	H-M entry	P_4_m_m
+377
+	concise SG	100
+	H-M entry	P_4_b_m
+378
+	concise SG	101
+	H-M entry	P_42_c_m
+379
+	concise SG	102
+	H-M entry	P_42_n_m
+380
+	concise SG	103
+	H-M entry	P_4_c_c
+381
+	concise SG	104
+	H-M entry	P_4_n_c
+382
+	concise SG	105
+	H-M entry	P_42_m_c
+383
+	concise SG	106
+	H-M entry	P_42_b_c
+384
+	concise SG	107
+	H-M entry	I_4_m_m
+385
+	concise SG	108
+	H-M entry	I_4_c_m
+386
+	concise SG	109
+	H-M entry	I_41_m_d
+387
+	concise SG	110
+	H-M entry	I_41_c_d
+388
+	concise SG	111
+	H-M entry	P_-4_2_m
+389
+	concise SG	112
+	H-M entry	P_-4_2_c
+390
+	concise SG	113
+	H-M entry	P_-4_21_m
+391
+	concise SG	114
+	H-M entry	P_-4_21_c
+392
+	concise SG	115
+	H-M entry	P_-4_m_2
+393
+	concise SG	116
+	H-M entry	P_-4_c_2
+394
+	concise SG	117
+	H-M entry	P_-4_b_2
+395
+	concise SG	118
+	H-M entry	P_-4_n_2
+396
+	concise SG	119
+	H-M entry	I_-4_m_2
+397
+	concise SG	120
+	H-M entry	I_-4_c_2
+398
+	concise SG	121
+	H-M entry	I_-4_2_m
+399
+	concise SG	122
+	H-M entry	I_-4_2_d
+400
+	concise SG	123
+	H-M entry	P_4/m_m_m
+401
+	concise SG	124
+	H-M entry	P_4/m_c_c
+402
+	concise SG	125:1
+	H-M entry	P_4/n_b_m:1
+403
+	concise SG	125:2
+	H-M entry	P_4/n_b_m:2
+404
+	concise SG	126:1
+	H-M entry	P_4/n_n_c:1
+405
+	concise SG	126:2
+	H-M entry	P_4/n_n_c:2
+406
+	concise SG	127
+	H-M entry	P_4/m_b_m
+407
+	concise SG	128
+	H-M entry	P_4/m_n_c
+408
+	concise SG	129:1
+	H-M entry	P_4/n_m_m:1
+409
+	concise SG	129:2
+	H-M entry	P_4/n_m_m:2
+410
+	concise SG	130:1
+	H-M entry	P_4/n_c_c:1
+411
+	concise SG	130:2
+	H-M entry	P_4/n_c_c:2
+412
+	concise SG	131
+	H-M entry	P_42/m_m_c
+413
+	concise SG	132
+	H-M entry	P_42/m_c_m
+414
+	concise SG	133:1
+	H-M entry	P_42/n_b_c:1
+415
+	concise SG	133:2
+	H-M entry	P_42/n_b_c:2
+416
+	concise SG	134:1
+	H-M entry	P_42/n_n_m:1
+417
+	concise SG	134:2
+	H-M entry	P_42/n_n_m:2
+418
+	concise SG	135
+	H-M entry	P_42/m_b_c
+419
+	concise SG	136
+	H-M entry	P_42/m_n_m
+420
+	concise SG	137:1
+	H-M entry	P_42/n_m_c:1
+421
+	concise SG	137:2
+	H-M entry	P_42/n_m_c:2
+422
+	concise SG	138:1
+	H-M entry	P_42/n_c_m:1
+423
+	concise SG	138:2
+	H-M entry	P_42/n_c_m:2
+424
+	concise SG	139
+	H-M entry	I_4/m_m_m
+425
+	concise SG	140
+	H-M entry	I_4/m_c_m
+426
+	concise SG	141:1
+	H-M entry	I_41/a_m_d:1
+427
+	concise SG	141:2
+	H-M entry	I_41/a_m_d:2
+428
+	concise SG	142:1
+	H-M entry	I_41/a_c_d:1
+429
+	concise SG	142:2
+	H-M entry	I_41/a_c_d:2
+430
+	concise SG	143
+	H-M entry	P_3
+431
+	concise SG	144
+	H-M entry	P_31
+432
+	concise SG	145
+	H-M entry	P_32
+433
+	concise SG	146:h
+	H-M entry	R_3:h
+434
+	concise SG	146:r
+	H-M entry	R_3:r
+435
+	concise SG	147
+	H-M entry	P_-3
+436
+	concise SG	148:h
+	H-M entry	R_-3:h
+437
+	concise SG	148:r
+	H-M entry	R_-3:r
+438
+	concise SG	149
+	H-M entry	P_3_1_2
+439
+	concise SG	150
+	H-M entry	P_3_2_1
+440
+	concise SG	151
+	H-M entry	P_31_1_2
+441
+	concise SG	152
+	H-M entry	P_31_2_1
+442
+	concise SG	153
+	H-M entry	P_32_1_2
+443
+	concise SG	154
+	H-M entry	P_32_2_1
+444
+	concise SG	155:h
+	H-M entry	R_3_2:h
+445
+	concise SG	155:r
+	H-M entry	R_3_2:r
+446
+	concise SG	156
+	H-M entry	P_3_m_1
+447
+	concise SG	157
+	H-M entry	P_3_1_m
+448
+	concise SG	158
+	H-M entry	P_3_c_1
+449
+	concise SG	159
+	H-M entry	P_3_1_c
+450
+	concise SG	160:h
+	H-M entry	R_3_m:h
+451
+	concise SG	160:r
+	H-M entry	R_3_m:r
+452
+	concise SG	161:h
+	H-M entry	R_3_c:h
+453
+	concise SG	161:r
+	H-M entry	R_3_c:r
+454
+	concise SG	162
+	H-M entry	P_-3_1_m
+455
+	concise SG	163
+	H-M entry	P_-3_1_c
+456
+	concise SG	164
+	H-M entry	P_-3_m_1
+457
+	concise SG	165
+	H-M entry	P_-3_c_1
+458
+	concise SG	166:h
+	H-M entry	R_-3_m:h
+459
+	concise SG	166:r
+	H-M entry	R_-3_m:r
+460
+	concise SG	167:h
+	H-M entry	R_-3_c:h
+461
+	concise SG	167:r
+	H-M entry	R_-3_c:r
+462
+	concise SG	168
+	H-M entry	P_6
+463
+	concise SG	169
+	H-M entry	P_61
+464
+	concise SG	170
+	H-M entry	P_65
+465
+	concise SG	171
+	H-M entry	P_62
+466
+	concise SG	172
+	H-M entry	P_64
+467
+	concise SG	173
+	H-M entry	P_63
+468
+	concise SG	174
+	H-M entry	P_-6
+469
+	concise SG	175
+	H-M entry	P_6/m
+470
+	concise SG	176
+	H-M entry	P_63/m
+471
+	concise SG	177
+	H-M entry	P_6_2_2
+472
+	concise SG	178
+	H-M entry	P_61_2_2
+473
+	concise SG	179
+	H-M entry	P_65_2_2
+474
+	concise SG	180
+	H-M entry	P_62_2_2
+475
+	concise SG	181
+	H-M entry	P_64_2_2
+476
+	concise SG	182
+	H-M entry	P_63_2_2
+477
+	concise SG	183
+	H-M entry	P_6_m_m
+478
+	concise SG	184
+	H-M entry	P_6_c_c
+479
+	concise SG	185
+	H-M entry	P_63_c_m
+480
+	concise SG	186
+	H-M entry	P_63_m_c
+481
+	concise SG	187
+	H-M entry	P_-6_m_2
+482
+	concise SG	188
+	H-M entry	P_-6_c_2
+483
+	concise SG	189
+	H-M entry	P_-6_2_m
+484
+	concise SG	190
+	H-M entry	P_-6_2_c
+485
+	concise SG	191
+	H-M entry	P_6/m_m_m
+486
+	concise SG	192
+	H-M entry	P_6/m_c_c
+487
+	concise SG	193
+	H-M entry	P_63/m_c_m
+488
+	concise SG	194
+	H-M entry	P_63/m_m_c
+489
+	concise SG	195
+	H-M entry	P_2_3
+490
+	concise SG	196
+	H-M entry	F_2_3
+491
+	concise SG	197
+	H-M entry	I_2_3
+492
+	concise SG	198
+	H-M entry	P_21_3
+493
+	concise SG	199
+	H-M entry	I_21_3
+494
+	concise SG	200
+	H-M entry	P_m_-3
+495
+	concise SG	201:1
+	H-M entry	P_n_-3:1
+496
+	concise SG	201:2
+	H-M entry	P_n_-3:2
+497
+	concise SG	202
+	H-M entry	F_m_-3
+498
+	concise SG	203:1
+	H-M entry	F_d_-3:1
+499
+	concise SG	203:2
+	H-M entry	F_d_-3:2
+500
+	concise SG	204
+	H-M entry	I_m_-3
+501
+	concise SG	205
+	H-M entry	P_a_-3
+502
+	concise SG	206
+	H-M entry	I_a_-3
+503
+	concise SG	207
+	H-M entry	P_4_3_2
+504
+	concise SG	208
+	H-M entry	P_42_3_2
+505
+	concise SG	209
+	H-M entry	F_4_3_2
+506
+	concise SG	210
+	H-M entry	F_41_3_2
+507
+	concise SG	211
+	H-M entry	I_4_3_2
+508
+	concise SG	212
+	H-M entry	P_43_3_2
+509
+	concise SG	213
+	H-M entry	P_41_3_2
+510
+	concise SG	214
+	H-M entry	I_41_3_2
+511
+	concise SG	215
+	H-M entry	P_-4_3_m
+512
+	concise SG	216
+	H-M entry	F_-4_3_m
+513
+	concise SG	217
+	H-M entry	I_-4_3_m
+514
+	concise SG	218
+	H-M entry	P_-4_3_n
+515
+	concise SG	219
+	H-M entry	F_-4_3_c
+516
+	concise SG	220
+	H-M entry	I_-4_3_d
+517
+	concise SG	221
+	H-M entry	P_m_-3_m
+518
+	concise SG	222:1
+	H-M entry	P_n_-3_n:1
+519
+	concise SG	222:2
+	H-M entry	P_n_-3_n:2
+520
+	concise SG	223
+	H-M entry	P_m_-3_n
+521
+	concise SG	224:1
+	H-M entry	P_n_-3_m:1
+522
+	concise SG	224:2
+	H-M entry	P_n_-3_m:2
+523
+	concise SG	225
+	H-M entry	F_m_-3_m
+524
+	concise SG	226
+	H-M entry	F_m_-3_c
+525
+	concise SG	227:1
+	H-M entry	F_d_-3_m:1
+526
+	concise SG	227:2
+	H-M entry	F_d_-3_m:2
+527
+	concise SG	228:1
+	H-M entry	F_d_-3_c:1
+528
+	concise SG	228:2
+	H-M entry	F_d_-3_c:2
+529
+	concise SG	229
+	H-M entry	I_m_-3_m
+530
+	concise SG	230
+	H-M entry	I_a_-3_d
