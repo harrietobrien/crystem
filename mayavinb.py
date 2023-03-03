@@ -2,14 +2,15 @@ from numpy import sqrt, sin, mgrid
 import numpy as np
 from crystem import CrystemList
 import itertools
-
+from mayavi.core.api import PipelineBase
 from traits.api import HasTraits, Instance, Property, \
-    List, Array, Int, CFloat, Enum, on_trait_change
+    List, Array, Int, on_trait_change
 from traitsui.api import View, Item, HSplit, \
     VSplit, InstanceEditor, ListEditor
 from tvtk.api import tvtk
 from tvtk.pyface.scene_editor import SceneEditor
 from mayavi.core.ui.engine_view import EngineView
+from mayavi.core.ui.api import MayaviScene
 from mayavi.tools.mlab_scene_model import MlabSceneModel
 from pubsub import pub
 import pandas as pd
@@ -21,17 +22,13 @@ class Struct(HasTraits):
     _crystem = None
     _bravais = None
     _struct_name: str = ''
-    _ucp_count: int = 0
-    _ucc_count: int = 0
-    # crystal matrix (basis)
+    _ucl_count: int = 0
+    _orientation_axes = None
     _prim_matrix, _conv_matrix = None, None
-    # plot unit cell lines
+    _ptlist_prim, _ptlist_conv = None, None
     _UC_prim, _UC_conv = None, None
-    # vector scene objects
     _BV_prim, _BV_conv = None, None
-    # plot points
     _plot_prim, _plot_conv = None, None
-    # primitive cell surfaces
     _prim_surf = None
     _scale_factor = 1
     view = View()
@@ -40,24 +37,19 @@ class Struct(HasTraits):
         HasTraits.__init__(self, **traits)
         self.edges: int = 2
         self.uc_line_names = list()
-        self.ptlist_prim = None
-        self.ptlist_conv = None
-        self.extra_points = None
+        self.basis_combinations = None
         pub.subscribe(self.listener, "latticeListener")
         pub.subscribe(self.listener, "ptSizeListener")
 
     def unitCellReset(self):
-        self._ucc_count = 0
-        self._UC_conv = None
-        self._ucp_count = 0
-        self._UC_prim = None
-        for obj in self.app.scene.mlab.pipeline \
-                .traverse(self.app.scene.mlab.gcf()):
+        ms = self.app.scene.mlab
+        for obj in ms.pipeline.traverse(ms.gcf()):
             if obj.name in self.uc_line_names:
+                # print(obj.name)
                 pass
 
     def update(self):
-        self.app.scene.update_pipeline()
+        self.app.scene.update_data()
 
     def basisVectorsFractional(self):
         return self._prim_matrix, self._conv_matrix
@@ -76,22 +68,14 @@ class Struct(HasTraits):
         # a_1, a_2, a_3 = self.basisVectors()
         # unit cell volume
         v = np.dot(a_1, np.cross(a_2, a_3))
-        print('v', v)
         c_1 = (2 * np.pi / v)
-        print('c_1', c_1)
         c_2 = 2 * np.pi
         b_1 = c_1 * np.cross(a_2, a_3)
-        print('b_1', b_1)
         b_2 = c_1 * np.cross(a_3, a_1)
-        print('b_2', b_2)
         b_3 = c_1 * np.cross(a_1, a_2)
-        print('b_3', b_3)
         u_1 = np.dot(b_1, a_1) / c_2
-        print('u_1', u_1)
         u_2 = np.dot(b_2, a_2) / c_2
-        print('u_2', u_2)
         u_3 = np.dot(b_3, a_3) / c_2
-        print('u_3', u_3)
         return b_1, b_2, b_3
 
     def extraLatticePoints(self, bravais):
@@ -140,17 +124,8 @@ class Struct(HasTraits):
     def getPointList(self):
         assert (self._prim_matrix is not None)
         assert (self._conv_matrix is not None)
-        self.ptlist_conv = self.eight_corners(cellType='conventional')
-        self.ptlist_prim = self.eight_corners(cellType='primitive')
-        print('point list primitive')
-        print(self.ptlist_prim)
-        # self.extra_points = self.extraLatticePoints(self._bravais)
-        # print(self.extra_points)
-        points = np.vstack([self.ptlist_prim, self.ptlist_conv])
-        # print('points')
-        # print(points)
-        # print(len(points))
-        # self.point_list_comb = np.array(list(set(tuple(p) for p in points)))
+        self._ptlist_conv = self.eight_corners(cellType='conventional')
+        self._ptlist_prim = self.eight_corners(cellType='primitive')
 
     def listener(self, message, listener=None):
         if listener == 'latticeListener':
@@ -173,19 +148,23 @@ class Struct(HasTraits):
 
     def redraw(self):
         if hasattr(self, 'app') and self.app.scene._renderer is not None:
+            self.app.scene.disable_render = True
             self.display()
-            self.displayUnitCell('conventional')
-            self.displayUnitCell('primitive')
-            # self.displayPrimitiveSurface()
+            self.displayOrientationAxes()
+            self.getConnections('conventional')
+            self.getConnections('primitive')
             self.unitCellReset()
+            # self.displayPrimitiveSurface()
+            self.app.scene.disable_render = False
 
-    def eight_corners(self, cellType=None):
+    def eight_corners(self, cellType='primitive'):
         primitive, conventional = self.basisVectorsFractional()
         if cellType == 'primitive':
             matrix = primitive
-        else:
-            assert (cellType == 'conventional')
+        elif cellType == 'conventional':
             matrix = conventional
+        else:
+            matrix = cellType
         corners = np.array([[0, 0, 0]])
         basis_list = [[1., 0., 0.], [0., 1., 0.], [0., 0., 1.]]
         for i in range(1, 4):
@@ -200,7 +179,7 @@ class Struct(HasTraits):
 
     def getSurfaceStacks(self):
         surfBounds = self.getSurfaceBounds(self.ptlist_prim)
-        assert(len(surfBounds) == 6)
+        assert (len(surfBounds) == 6)
         surfStacks = list()
         for points in surfBounds:
             ptStack = np.empty([1, 3], dtype=float)
@@ -211,7 +190,7 @@ class Struct(HasTraits):
                 point = np.array(point)
                 ptStack = np.vstack([ptStack, point])
             surfStacks.append(ptStack)
-        assert(len(surfStacks) == 6)
+        assert (len(surfStacks) == 6)
         return surfStacks
 
     @staticmethod
@@ -226,6 +205,48 @@ class Struct(HasTraits):
                 currSurf.append(corners[ptIndex])
             boundPoints.append(currSurf)
         return boundPoints
+
+    def displayPrimitiveSurface(self):
+        stacks = self.getSurfaceStacks()
+        print('STACKS\n', stacks)
+        ns = self.getSurfaceNormals()
+        x0, y0, z0 = 0, 0, 0
+        for i in range(len(ns)):
+            xc, yc, zc = ns[i]
+            if i >= 3:
+                x0, y0, z0 = 1, 1, 1
+            z = (x0 * zc + y0 * xc + z0 * yc - x * xc - y * yc) / zc
+        print('NORMALS\n', ns)
+
+    def getSurfaceNormals(self, cellType='primitive'):
+        if cellType == 'primitive':
+            matrix = self._prim_matrix
+        else:
+            assert (cellType == 'conventional')
+            matrix = self._conv_matrix
+        a1, a2, a3 = matrix[:, 0], matrix[:, 1], matrix[:, 2]
+        ri = self.rotoInvert(1, matrix)
+        print('ri\t', ri)
+        a4, a5, a6 = ri[:, 0], ri[:, 1], ri[:, 2]
+        n1 = np.cross(a1, a2)
+        n2 = np.cross(a1, a3)
+        n3 = np.cross(a2, a3)
+        n4 = np.cross(a4, a5)
+        n5 = np.cross(a4, a6)
+        n6 = np.cross(a5, a6)
+        print(n1, n2, n3, n4, n5, n6)
+        return n1, n2, n3, n4, n5, n6
+
+    @staticmethod
+    def rotoInvert(n, matrix):
+        # plot to check these
+        phi = 2 * np.pi / n
+        xri = np.array([-np.cos(phi), np.sin(phi), 0])
+        yri = np.array([-np.sin(phi), -np.cos(phi), 0])
+        zri = np.array([0, 0, -1])
+        transRI = np.column_stack([xri, yri, zri])
+        # check matrix shape
+        return np.dot(transRI, matrix)
 
     def create_3D_lattice(self, edges=None, cellType=None):
         primitive, conventional = self.basisVectorsFractional()
@@ -262,14 +283,49 @@ class Struct(HasTraits):
         for (i, pt) in enumerate(point_list):
             print(i + 1, '\t', pt)
 
+    @on_trait_change('_ptlist_prim, _ptlist_conv, struct.activated')
+    def getConnections(self, cellType='primitive'):
+        connections = [[0, 1], [0, 2], [0, 3],
+                       [1, 4], [1, 5], [2, 4],
+                       [2, 6], [3, 5], [3, 6],
+                       [4, 7], [5, 7], [6, 7]]
+        lattice = self.eight_corners(cellType)
+        xs = np.hstack(lattice[:, 0])
+        ys = np.hstack(lattice[:, 1])
+        zs = np.hstack(lattice[:, 2])
+        if cellType == 'primitive':
+            if self._UC_prim is None:
+                self._UC_prim = self.app.scene.mlab.pipeline.scalar_scatter(xs, ys, zs)
+                self._UC_prim.mlab_source.dataset.lines = connections
+                self._UC_prim.update()
+                lines = self.app.scene.mlab.pipeline.stripper(self._UC_prim)
+                self.app.scene.mlab.pipeline.surface(lines, line_width=2)
+            else:
+                self._UC_prim.mlab_source.reset(x=xs, y=ys, z=zs)
+        else:
+            assert (cellType == 'conventional')
+            if self._UC_conv is None:
+                self._UC_conv = self.app.scene.mlab.pipeline.scalar_scatter(xs, ys, zs)
+                self._UC_conv.mlab_source.dataset.lines = connections
+                self._UC_conv.update()
+                lines = self.app.scene.mlab.pipeline.stripper(self._UC_conv)
+                self.app.scene.mlab.pipeline.surface(lines, line_width=2)
+                self.app.scene.mlab.show()
+            else:
+                self._UC_conv.mlab_source.reset(x=xs, y=ys, z=zs)
+
     def getUnitCellConnections(self, cellType='primitive'):
         # 8 corners of the unit cell
-        lattice = self.eight_corners(cellType)
+        if cellType == 'primitive':
+            lattice = self._ptlist_prim
+        else:
+            assert(cellType == 'conventional')
+            lattice = self._ptlist_conv
         # defined connections explicitly
-        connections = [(0, 1), (0, 2), (0, 3),
-                       (1, 4), (1, 5), (2, 4),
-                       (2, 6), (3, 5), (3, 6),
-                       (4, 7), (5, 7), (6, 7)]
+        connections = [[0, 1], [0, 2], [0, 3],
+                       [1, 4], [1, 5], [2, 4],
+                       [2, 6], [3, 5], [3, 6],
+                       [4, 7], [5, 7], [6, 7]]
         lines = list()
         for edge in connections:
             i, j = edge
@@ -277,17 +333,39 @@ class Struct(HasTraits):
             for k in range(3):
                 currLine[k].append(lattice[i][k])
                 currLine[k].append(lattice[j][k])
-            line = list()
-            for pt in currLine:
-                line.append(tuple(pt))
-            lines.append(tuple(line))
-            print(lines)
-        return tuple(lines)
+            lines.append(currLine)
+        return lines
 
-    @on_trait_change('_UC_prim, _UC_conv')
+    @staticmethod
+    def wrapper(method, args):
+        return method.mlab_source.reset(*args)
+
+    @on_trait_change('scene.activated')
     def displayUnitCell(self, cellType='primitive'):
         if cellType == 'primitive':
-            connections = self.getUnitCellConnections('primitive')
+            _plot_attr = '_UC_prim'
+        else:
+            assert (cellType == 'conventional')
+            _plot_attr = '_UC_conv'
+        connections = self.getUnitCellConnections(cellType)
+        for line in connections:
+            self._ucl_count += 1
+            xs, ys, zs = line
+            currPlot = getattr(self, _plot_attr)
+            if currPlot is None:
+                if self._ucl_count < 13:
+                    name = "{sn}_UC_line_{n}".format(
+                        sn=self._struct_name, n=str(self._ucl_count))
+                    self.uc_line_names.append(name)
+                    _plot = self.app.scene.mlab.plot3d(
+                        xs, ys, zs, name=name, tube_radius=None)  # 0.05)
+            else:
+                self.app.scene.mlab.clf()
+                self.wrapper(currPlot, line)
+                # self.unitCellReset()
+                # setattr(self, _plot_attr, _plot)
+        '''
+        if cellType == 'primitive':
             if self._UC_prim is None:
                 for line in connections:
                     self._ucp_count += 1
@@ -295,12 +373,13 @@ class Struct(HasTraits):
                     if self._ucp_count < 13:
                         name = "{sn}_UC_line_{n}".format(
                             sn=self._struct_name, n=str(self._ucp_count))
-                        # self.uc_line_names.append(name)
                         self._UC_prim = self.app.scene.mlab.plot3d(
                             xs, ys, zs, name=name, tube_radius=0.05)
+            else:
+                self._UC_prim.mlab_source = None
         else:
             assert (cellType == 'conventional')
-            connections = self.getUnitCellConnections('conventional')
+            # connections = self.getUnitCellConnections(cellType)
             if self._UC_conv is None:
                 for line in connections:
                     self._ucc_count += 1
@@ -308,12 +387,14 @@ class Struct(HasTraits):
                     if self._ucc_count < 13:
                         name = "{sn}_UC_line_{n}".format(
                             sn=self._struct_name, n=str(self._ucc_count))
-                        # self.uc_line_names.append(name)
                         self._UC_conv = self.app.scene.mlab.plot3d(
                             xs, ys, zs, name=name, tube_radius=0.05)
+            else:
+                self._UC_conv.mlab_source = None
+        '''
 
-    @on_trait_change('_prim_surf')
-    def displayPrimitiveSurface(self):
+    @on_trait_change('_prim_surf, struct.activated')
+    def displayPrimitiveSurfaceX(self):
         surfStacks = self.getSurfaceStacks()
         if self._prim_surf is None:
             for surfPts in surfStacks:
@@ -324,7 +405,7 @@ class Struct(HasTraits):
         else:
             self._prim_surf.mlab_source.trait_set()
 
-    @on_trait_change('_BV_prim, _BV_conv')
+    @on_trait_change('_BV_prim, _BV_conv, struct.activated')
     def displayBasisVectors(self):
         if not self.basisVectorsFractional():
             return
@@ -332,97 +413,63 @@ class Struct(HasTraits):
         a1_pf, a2_pf, a3_pf = primitive
         a1_cf, a2_cf, a3_cf = conventional
         x0, y0, z0 = np.array([0, 0, 0]), np.array([0, 0, 0]), np.array([0, 0, 0])
-        xc, yc, zc = np.array([.5, .5, .5]), np.array([.5, .5, .5]), np.array([.5, .5, .5])
         if self._BV_prim is None:
             self._BV_prim = self.app.scene.mlab.quiver3d(
                 x0, y0, z0, a1_pf, a2_pf, a3_pf, line_width=4, mode="2darrow",
-                name="F", scale_mode='vector')
+                name="Primitive Basis Vectors", scale_mode='vector')
         else:
             self._BV_prim.mlab_source \
-                .trait_set(x=xc, y=yc, z=zc, u=a1_pf, v=a2_pf, w=a3_pf)
+                .trait_set(x=x0, y=y0, z=z0, u=a1_pf, v=a2_pf, w=a3_pf)
         orange = [255., 165., 0.]
         for j in range(len(orange)):
             rbg = orange[j]
             orange[j] = rbg / 255.
         if self._BV_conv is None:
             self._BV_conv = self.app.scene.mlab.quiver3d(
-                x0, y0, z0, a1_cf, a2_cf, a3_cf, color=tuple(orange), line_width=3,
-                mode="2darrow", name="C", scale_mode='vector')
+                x0, y0, z0, a1_cf, a2_cf, a3_cf, color=tuple(orange), line_width=4,
+                mode="2darrow", name="Conventional Basis Vectors", scale_mode='vector')
         else:
             self._BV_conv.mlab_source \
                 .trait_set(x=x0, y=y0, z=z0, u=a1_cf, v=a2_cf, w=a3_cf)
 
+    @on_trait_change('struct.activated')
+    def displayOrientationAxes(self):
+        if self._orientation_axes is None:
+            self._orientation_axes = self.app.scene.mlab.orientation_axes()
+
     # display the lattice in 3D scene
-    @on_trait_change('_plot_prim, _plot_conv')
+    @on_trait_change('_plot_prim, _plot_conv', 'scene.activated')
     def display(self):
         self.app.scene.disable_render = True
         self.displayBasisVectors()
         # primitive cell
-        x_pf = self.ptlist_prim[:, 0]
-        y_pf = self.ptlist_prim[:, 1]
-        z_pf = self.ptlist_prim[:, 2]
+        x_pf = self._ptlist_prim[:, 0]
+        y_pf = self._ptlist_prim[:, 1]
+        z_pf = self._ptlist_prim[:, 2]
         # conventional cell
-        x_cf = self.ptlist_conv[:, 0]
-        y_cf = self.ptlist_conv[:, 1]
-        z_cf = self.ptlist_conv[:, 2]
-        '''
-        self.app.scene.mlab.orientation_axes()
-        if self._plot_prim is None:
-            primDF = pd.DataFrame(self.ptlist_prim, columns=['x', 'y', 'z'])
-            primLinks = self.getUnitCellConnections('primitive')
-            primG = nx.Graph()
-            primG.add_edges_from(primLinks)
-            primNodes = dict()
-            for i in range(len(primG.nodes())):
-                n = primG.nodes()[i]
-                xyz = primDF.loc[n]
-                node = self.app.scene.mlab.points3d(xyz['x'], xyz['y'], xyz['z'])
-                primNodes[i] = node
-            primEdges = dict()
-            for j in range(len(primG.edges())):
-                e = primG.edges()[j]
-                xyz = primDF.loc[np.array(e)]
-                edge = self.app.scene.mlab.plot3d(xyz['x'], xyz['y'], xyz['z'], tube_radius=1)
-                primEdges[j] = edge
-        # else:
-            # self._plot_prim.mlab_source.reset(x=x_pf, y=y_pf, z=z_pf)
-
-        if self._plot_conv is None:
-            convDF = pd.DataFrame(self.ptlist_conv, columns=['x', 'y', 'z'])
-            convLinks = self.getUnitCellConnections('conventional')
-            convG = nx.OrderedGraph()
-            convG.add_edges_from(convLinks)
-            convNodes = dict()
-            for i, n in enumerate(convG.nodes()):
-                xyz = convDF.loc[n]
-                n = self.app.scene.mlab.points3d(xyz['x'], xyz['y'], xyz['z'])
-                convNodes[i] = n
-            primEdges = dict()
-            for j, e in enumerate(convG.edges()):
-                xyz = convDF.loc[np.array(e)]
-                primEdges[j] = self.app.scene.mlab.plot3d(xyz['x'], xyz['y'], xyz['z'], tube_radius=1)
-        # else:
-            # self._plot_conv.mlab_source.reset(x=x_cf, y=y_cf, z=z_cf)
-        self.app.scene.disable_render = False
-        '''
+        x_cf = self._ptlist_conv[:, 0]
+        y_cf = self._ptlist_conv[:, 1]
+        z_cf = self._ptlist_conv[:, 2]
         # create scalar for color mapping
         s = np.zeros(self.edges ** 3)
         s.fill(0.25)
-        self.app.scene.mlab.orientation_axes()
         if self._plot_prim is None:
+            name = self._struct_name + ' Primitive Points'
             self._plot_prim = self.app.scene.mlab. \
-                points3d(x_pf, y_pf, z_pf, name=self._struct_name,  # s, colormap='Spectral',
+                points3d(x_pf, y_pf, z_pf, s, name=name, colormap='Spectral',
                          resolution=32, scale_factor=self._scale_factor, scale_mode='vector')
         else:
             self._plot_prim.mlab_source.reset(x=x_pf, y=y_pf, z=z_pf)
 
         if self._plot_conv is None:
+            name = self._struct_name + ' Conventional Points'
             self._plot_conv = self.app.scene.mlab. \
-                points3d(x_cf, y_cf, z_cf, s, name=self._struct_name,
+                points3d(x_cf, y_cf, z_cf, s, name=name,
                          resolution=32, scale_factor=self._scale_factor, scale_mode='vector')
         else:
             self._plot_conv.mlab_source.reset(x=x_cf, y=y_cf, z=z_cf)
         self.app.scene.disable_render = False
+
 
 # application object
 class MayaviNotebook(HasTraits):
@@ -441,11 +488,11 @@ class MayaviNotebook(HasTraits):
                                    show_label=False
                                    ),
                               Item(name='current_selection',
-                              editor=InstanceEditor(),
-                              enabled_when='current_selection is not None',
-                              style='custom',
-                              springy=True,
-                              show_label=False),
+                                   editor=InstanceEditor(),
+                                   enabled_when='current_selection is not None',
+                                   style='custom',
+                                   springy=True,
+                                   show_label=False),
                               ),
                        Item(name='scene',
                             editor=SceneEditor(),
@@ -460,24 +507,16 @@ class MayaviNotebook(HasTraits):
 
     def __init__(self, **traits):
         HasTraits.__init__(self, **traits)
-        # **************************************
         self.engine_view = EngineView(engine=self.scene.engine)
-        # Hook up the current_selection to change when the one in the engine
-        # changes.  This is probably unnecessary in Traits3
         self.scene.engine.on_trait_change(self._selection_change, 'current_selection')
 
     @on_trait_change('scene.activated,struct')
     def init_view(self):
         if self.scene._renderer is not None:
             self.scene.scene_editor.background = (0, 0, 0)
-            # self.scene.mlab.pipeline.remove(TubeFactory)
+            print(self.struct)
             for struct in self.struct:
                 struct.app = self
-                struct.display()
-                struct.displayUnitCell('conventional')
-                struct.displayUnitCell('primitive')
-                struct.unitCellReset()
-                # struct.displayPrimitiveSurface()
 
     def _selection_change(self, old, new):
         self.trait_property_changed('current_selection', old, new)
@@ -485,28 +524,9 @@ class MayaviNotebook(HasTraits):
     def _get_current_selection(self):
         return self.scene.engine.current_selection
 
-    def visualize_unit_cell(self, struct):
-        self.scene.scene.disable_render = True
-        for line in struct._connections:
-            struct._uce_count += 1
-            xs, ys, zs = line
-            if struct._uce_count < 13:
-                name = "{sn}_UC_line_{n}".format(sn=struct._struct_name, n=str(struct._uce_count))
-                # print(name)
-                # print(struct._uce_count)
-                struct.uc_line_names.append(name)
-                # self.app.scene.mlab.plot3d
-                struct._unit_cell = self.scene.mlab.pipeline.plot3d(xs, ys, zs, name=name, tube_radius=0.01,
-                                                                    figure=self.app.scene.mayavi_scene)
-        self.scene.scene.disable_render = False
-
-
-'''
     def generate_data_mayavi(self):
-        """Shows how you can generate data using mayavi instead of mlab."""
         # from mayavi.sources.api import ParametricSurface
         # from mayavi.modules.api import Outline, Surface
-        import mayavi.mlab
         x = self.point_list[:, 0]
         y = self.point_list[:, 1]
         z = self.point_list[:, 2]
@@ -517,14 +537,3 @@ class MayaviNotebook(HasTraits):
         # e.add_source(s)
         # e.add_module(Outline())
         # e.add_module(Surface())
-
-
-        
-    @staticmethod
-    def draw_sphere(xc, yc, zc, r):
-        mg = np.mgrid[0:2 * np.pi:20j, 0:np.pi:10j]
-        x = r * np.cos(mg[0]) * np.sin(mg[1]) + xc
-        y = r * np.sin(mg[0]) * np.sin(mg[1]) + yc
-        z = r * np.cos(mg[1]) + zc
-        return x, y, z
-'''
