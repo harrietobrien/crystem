@@ -1,0 +1,10 @@
+/.idea/
+/__pycache__/
+/data/
+/mayavi/
+readme.rtf
+hall_out.txt
+constants.ods
+.DS_Store
+coordinates.py
+tu5004sup1.txt
